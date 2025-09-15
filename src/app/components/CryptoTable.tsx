@@ -10,36 +10,36 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
     return (
         <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
-                <thead className="bg-gradient-to-t from-sky-500/20 from-10% via-sky-950/70 via-5% to-black">
+                <thead className="bg-gradient-to-t from-sky-500/20 from-10% via-sky-950/70 via-10% to-black">
                     <tr>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             #
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Name
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Price
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             1h %
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             24h %
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             7d %
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Market Cap
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Volume(24h)
                         </th>
-                        <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Circulating Supply
                         </th>
-                        {/* <th className="px-3 py-3 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        {/* <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Last 7 Days
                         </th> */}
                     </tr>
