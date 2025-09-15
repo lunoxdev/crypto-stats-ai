@@ -2,11 +2,11 @@ import { SparklesCore } from "@/components/ui/sparkles";
 
 const Hero = () => {
     return (
-        <section className="w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
-            <h1 className="text-4xl sm:text-6xl font-semibold relative z-20 mt-5 sm:mt-10">
-                Crypto Stats
-            </h1>
-            <div className="w-[45rem] h-32 relative">
+        <section className="w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md mt-5">
+            <div className="w-[50rem] h-40 relative">
+                <h1 className="text-5xl sm:text-6xl font-semibold absolute inset-0 flex justify-center mt-10 sm:mt-7">
+                    Crypto Stats
+                </h1>
                 {/* Gradients */}
                 <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
                 <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
@@ -24,7 +24,7 @@ const Hero = () => {
                 />
 
                 {/* Radial Gradient to prevent sharp edges */}
-                <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]" />
+                <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(500px_200px_at_top,transparent_20%,white)]" />
             </div>
         </section>
     )
