@@ -3,9 +3,10 @@ import { Data } from "../../types";
 
 interface CryptoTableProps {
     data: Data[];
+    onRowClick: (crypto: Data) => void;
 }
 
-const CryptoTable = ({ data }: CryptoTableProps) => {
+const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
     return (
         <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
@@ -47,7 +48,8 @@ const CryptoTable = ({ data }: CryptoTableProps) => {
                     {data.map((crypto, index) => (
                         <tr
                             key={crypto.id}
-                            className="hover:bg-gradient-to-t from-sky-500/10 to-sky-500/20 transition duration-75"
+                            className="hover:bg-gradient-to-t from-sky-500/10 to-sky-500/20 transition duration-75 cursor-pointer"
+                            onClick={() => onRowClick(crypto)}
                         >
                             <td className="px-3 py-4 whitespace-nowrap text-xs sm:text-base font-medium text-amber-500">
                                 {index + 1}
