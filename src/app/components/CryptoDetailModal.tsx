@@ -91,12 +91,19 @@ const CryptoDetailModal = ({
         <div className="fixed inset-0 bg-black/80 backdrop-blur-xs flex justify-center items-center z-50">
             <div className="bg-gradient-to-b from-sky-950/50 to-sky-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="flex justify-between items-center mb-4">
-                    <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 inline-block text-transparent bg-clip-text">
-                        {crypto.name} ({crypto.symbol})
-                    </h2>
+                    <div className="flex items-center">
+                        <img
+                            src={`https://s2.coinmarketcap.com/static/img/coins/64x64/${crypto.id}.png`}
+                            alt={`${crypto.name} logo`}
+                            className="w-6 h-6 mr-2"
+                        />
+                        <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 inline-block text-transparent bg-clip-text">
+                            {crypto.name} ({crypto.symbol})
+                        </h2>
+                    </div>
                     <button
                         onClick={onClose}
-                        className="hover:scale-125 text-xl cursor-pointer transition duration-100"
+                        className="hover:scale-125 hover:font-bold text-xl cursor-pointer transition duration-100"
                     >
                         ✕
                     </button>
@@ -179,7 +186,7 @@ const CryptoDetailModal = ({
                                 </span>
                                 <button
                                     onClick={() => setComparedCrypto(null)}
-                                    className="hover:text-white ml-2 hover:scale-125 text-sm cursor-pointer transition duration-100"
+                                    className="hover:font-bold ml-2 hover:scale-125 text-sm cursor-pointer transition duration-100"
                                 >
                                     ✕
                                 </button>
