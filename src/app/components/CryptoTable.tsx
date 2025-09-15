@@ -10,7 +10,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
     return (
         <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
-                <thead className="bg-gradient-to-t from-sky-500/20 from-5% to-black">
+                <thead className="bg-gradient-to-t from-sky-500/20 from-5% via-indigo-950/70 via-40% to-black">
                     <tr>
                         <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             #
@@ -48,7 +48,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
                     {data.map((crypto, index) => (
                         <tr
                             key={crypto.id}
-                            className="hover:bg-gradient-to-t from-sky-500/10 to-sky-500/20 transition duration-75 cursor-pointer"
+                            className="hover:bg-gradient-to-br from-sky-500/15 to-indigo-500/15 transition duration-75 cursor-pointer"
                             onClick={() => onRowClick(crypto)}
                         >
                             <td className="px-3 py-4 whitespace-nowrap text-xs sm:text-base font-medium text-amber-500">

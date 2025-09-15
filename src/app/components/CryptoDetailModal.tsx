@@ -89,7 +89,7 @@ const CryptoDetailModal = ({
 
     return (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-xs flex justify-center items-center z-50">
-            <div className="bg-gradient-to-b from-sky-950/50 to-sky-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="bg-gradient-to-b from-sky-950/50 to-indigo-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center">
                         <img
@@ -97,7 +97,7 @@ const CryptoDetailModal = ({
                             alt={`${crypto.name} logo`}
                             className="w-6 h-6 mr-2"
                         />
-                        <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 inline-block text-transparent bg-clip-text">
+                        <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 inline-block text-transparent bg-clip-text">
                             {crypto.name} ({crypto.symbol})
                         </h2>
                     </div>
@@ -118,8 +118,8 @@ const CryptoDetailModal = ({
                                     key={tf}
                                     onClick={() => setTimeframe(tf)}
                                     className={`px-3 py-1 rounded-md text-sm transition duration-400 cursor-pointer ${timeframe === tf
-                                        ? "bg-gradient-to-br from-sky-500 to-sky-600 font-bold animate-pulse"
-                                        : "border border-sky-800 hover:bg-sky-600"
+                                        ? "bg-gradient-to-br from-sky-500 to-indigo-500 font-bold animate-pulse brightness-110"
+                                        : "border border-sky-800 hover:bg-gradient-to-br from-sky-500/50 to-indigo-500/50"
                                         }`}
                                 >
                                     {tf}
@@ -160,7 +160,7 @@ const CryptoDetailModal = ({
                         <input
                             type="text"
                             placeholder="Search cryptocurrency..."
-                            className="w-full p-2 rounded-md border border-sky-500 focus:ring-sky-500 focus:border-sky-500 mb-2 cursor-pointer outline-none"
+                            className="w-full p-2 rounded-md border border-sky-600 border-x-0 focus:border-sky-500 hover:brightness-110 mb-2 cursor-pointer outline-none"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
