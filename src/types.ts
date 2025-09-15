@@ -47,3 +47,10 @@ export interface Usd {
   tvl: number | null;
   last_updated: Date;
 }
+
+export interface CryptoDetailModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+  crypto: Data | null;
+  allCryptos: Data[];
+}
