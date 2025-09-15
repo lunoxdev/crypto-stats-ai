@@ -7,7 +7,7 @@ interface CryptoTableProps {
 
 const CryptoTable = ({ data }: CryptoTableProps) => {
     return (
-        <section className="overflow-x-auto w-full rounded-lg">
+        <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
                 <thead className="bg-gradient-to-t from-sky-500/20 from-5% to-black">
                     <tr>
