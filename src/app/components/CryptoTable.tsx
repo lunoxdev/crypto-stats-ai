@@ -38,9 +38,9 @@ const CryptoTable = ({ data }: CryptoTableProps) => {
                         <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Circulating Supply
                         </th>
-                        <th className="px-3 py-3 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+                        {/* <th className="px-3 py-3 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             Last 7 Days
-                        </th>
+                        </th> */}
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-sky-300/20">
