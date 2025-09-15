@@ -127,7 +127,7 @@ const CryptoDetailModal = ({
                             ))}
                         </div>
                         {/* Chart */}
-                        <div className="flex-grow bg-black/30 rounded-md flex items-center justify-center p-4 shadow-md shadow-black">
+                        <div className="h-72 sm:h-full bg-black/30 rounded-md flex items-center justify-center shadow-md shadow-black">
                             {chartData.length > 0 ||
                                 (comparedCrypto && comparisonChartData.length > 0) ? (
                                 <Chart
@@ -155,8 +155,8 @@ const CryptoDetailModal = ({
                         </div>
                     </div>
                     {/* Left section: Other cryptos list */}
-                    <div className="md:col-span-1 bg-black/30 p-4 rounded-md shadow-md shadow-black">
-                        <h3 className="text-xl font-medium mb-2">Compare With:</h3>
+                    <div className="md:col-span-1 bg-black/30 p-4 rounded-md shadow-md shadow-black h-52 sm:h-full overflow-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                        <h3 className="text-xl font-medium mb-2">Compare with:</h3>
                         <input
                             type="text"
                             placeholder="Search cryptocurrency..."
@@ -168,7 +168,7 @@ const CryptoDetailModal = ({
                             {filteredCryptos.map((c) => (
                                 <li
                                     key={c.id}
-                                    className="p-2 hover:bg-gradient-to-t from-sky-500/30 to-sky-500/40 transition duration-75 cursor-pointer rounded-md"
+                                    className="p-2 hover:bg-gradient-to-t from-sky-500/30 to-indigo-500/30 transition duration-75 cursor-pointer rounded-md"
                                     onClick={() => {
                                         setComparedCrypto(c);
                                         setSearchTerm(""); // Clear search after selection
@@ -180,9 +180,9 @@ const CryptoDetailModal = ({
                             ))}
                         </ul>
                         {comparedCrypto && (
-                            <div className="mt-4 p-3 bg-gradient-to-t from-sky-500/10 to-sky-500/20 rounded-md flex justify-between items-center">
+                            <div className="mt-4 p-3 bg-gradient-to-t from-sky-500/10 to-indigo-500/20 rounded-md flex justify-between items-center">
                                 <span>
-                                    Comparing with: {comparedCrypto.name} ({comparedCrypto.symbol})
+                                    {comparedCrypto.name} ({comparedCrypto.symbol})
                                 </span>
                                 <button
                                     onClick={() => setComparedCrypto(null)}
