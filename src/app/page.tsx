@@ -38,7 +38,7 @@ export default function Home() {
   };
 
   return (
-    <main className="flex flex-col items-center max-w-2xl sm:max-w-9/12 w-full h-full mx-auto p-2">
+    <main className="flex flex-col items-center max-w-2xl sm:max-w-9/12 w-full h-full mx-auto px-2 pb-2">
       {/* Hero Section with Aceternity Sparkles Component */}
       <Hero />
 

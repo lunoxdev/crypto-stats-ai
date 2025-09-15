@@ -10,7 +10,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
     return (
         <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
-                <thead className="bg-gradient-to-t from-sky-500/20 from-5% via-indigo-950/70 via-40% to-black">
+                <thead className="bg-gradient-to-t from-sky-500/20 from-10% via-sky-950/70 via-5% to-black">
                     <tr>
                         <th className="px-3 py-6 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
                             #
