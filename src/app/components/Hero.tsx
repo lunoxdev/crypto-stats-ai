@@ -4,7 +4,7 @@ const Hero = () => {
     return (
         <section className="w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
             <h1 className="text-4xl sm:text-6xl font-semibold relative z-20 mt-5 sm:mt-10">
-                Crypto Graph
+                Crypto Stats
             </h1>
             <div className="w-[45rem] h-32 relative">
                 {/* Gradients */}

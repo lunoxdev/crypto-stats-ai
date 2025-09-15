@@ -1,4 +1,4 @@
-# Crypto Graph
+# Crypto Stats
 
 ## Description
 
@@ -21,8 +21,8 @@ Follow these steps to set up and run the project locally:
 1.  **Clone the repository:**
 
     ```bash
-    git clone https://github.com/lunoxdev/crypto-graph.git
-    cd crypto-graph
+    git clone https://github.com/lunoxdev/crypto-stats-ai.git
+    cd crypto-stats-ai
     ```
 
 2.  **Install dependencies using pnpm:**
