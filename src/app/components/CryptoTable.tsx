@@ -1,4 +1,6 @@
+import { useEffect, useRef } from "react";
 import { type Data } from "../../types";
+import gsap from "gsap";
 
 interface CryptoTableProps {
     data: Data[];
@@ -14,6 +16,22 @@ const TableHead = ({ text }: { text: string }) => {
 }
 
 const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
+    // Table GSAP animation
+    const tableRef = useRef<HTMLTableSectionElement | null>(null);
+
+    useEffect(() => {
+        const table = tableRef.current;
+        if (!table) return;
+
+        const rows = Array.from(table.children);
+        gsap.fromTo(
+            rows,
+            { opacity: 0, y: 20 },
+            { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power3.out" }
+        );
+    }, [data]);
+
+
     return (
         <section className="overflow-x-auto w-full rounded-lg [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <table className="min-w-full divide-y divide-sky-500">
@@ -31,11 +49,11 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
                         {/* <TableHead text="Last 7 Days" /> */}
                     </tr>
                 </thead>
-                <tbody className="divide-y divide-sky-300/20">
+                <tbody ref={tableRef} className="divide-y divide-sky-300/20">
                     {data.map((crypto, index) => (
                         <tr
                             key={crypto.id}
-                            className="hover:bg-gradient-to-br from-sky-500/15 to-indigo-500/15 transition duration-75 cursor-pointer"
+                            className="hover:bg-gradient-to-br from-sky-500/15 to-indigo-500/15 transition duration-300 cursor-pointer"
                             onClick={() => onRowClick(crypto)}
                         >
                             <td className="px-3 py-4 whitespace-nowrap text-xs sm:text-base font-medium text-amber-500">
