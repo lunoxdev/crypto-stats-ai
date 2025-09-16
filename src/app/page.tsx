@@ -5,6 +5,7 @@ import { type Data } from "./../types"
 import Hero from "./components/Hero";
 import CryptoTable from "./components/CryptoTable";
 import CryptoDetailModal from "./components/CryptoDetailModal";
+import Background from "./components/Background";
 
 export default function Home() {
   const [data, setData] = useState<Data[]>([]);
@@ -39,6 +40,8 @@ export default function Home() {
 
   return (
     <main className="flex flex-col items-center max-w-2xl sm:max-w-9/12 w-full h-full mx-auto px-2 pb-2">
+      <Background />
+
       {/* Hero Section with Aceternity Sparkles Component */}
       <Hero />
 

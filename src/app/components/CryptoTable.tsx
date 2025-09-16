@@ -9,7 +9,7 @@ interface CryptoTableProps {
 
 const TableHead = ({ text }: { text: string }) => {
     return (
-        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider font-extrabold text-nowrap">
             {text}
         </th>
     )
