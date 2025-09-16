@@ -52,6 +52,9 @@ export default function Home() {
         crypto={selectedCrypto}
         allCryptos={data}
       />
+
+      {/* Fixed gradient overlay for footer blur effect */}
+      <div className="fixed inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black to-transparent pointer-events-none z-10" />
     </main>
   );
 }
