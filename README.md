@@ -2,17 +2,19 @@
 
 ## Description
 
-A web app that displays real‑time crypto data from the CoinMarketCap API with key metrics like price, % changes, market cap, volume, etc.
+A web app that displays real‑time crypto data from the CoinMarketCap API and Coingecko with key metrics like price, % changes, market cap, volume, etc.
 
 ## Tech Stack
 
-- **Next.js**: React framework for building full-stack web applications.
 - **TypeScript**: Typed superset of JavaScript that compiles to plain JavaScript.
 - **React**: JavaScript library for building user interfaces.
-- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
 - **Axios**: Promise-based HTTP client for making API requests.
+- **GSAP**: A robust JavaScript animation library.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Apexcharts**: A modern open-source charting library for JavaScript.
 - **CoinMarketCap API**: For fetching cryptocurrency data.
 - **Biome**: For linting and formatting code.
+- **Next.js**: React framework for building full-stack web applications.
 
 ## Installation
 
