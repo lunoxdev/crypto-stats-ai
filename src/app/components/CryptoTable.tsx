@@ -1,18 +1,11 @@
 import { useEffect, useRef } from "react";
 import { type Data } from "../../types";
 import gsap from "gsap";
+import TableHead from "../components/commons/TableHead"
 
 interface CryptoTableProps {
     data: Data[];
     onRowClick: (crypto: Data) => void;
-}
-
-const TableHead = ({ text }: { text: string }) => {
-    return (
-        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider font-extrabold text-nowrap">
-            {text}
-        </th>
-    )
 }
 
 const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
