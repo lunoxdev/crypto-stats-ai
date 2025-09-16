@@ -2,7 +2,7 @@ import { type Data } from "@/types";
 
 export const timeframes = ["1D", "7D", "1M", "1Y"];
 
-export const getChartOptions = () => ({
+export const getChartOptions = (comparedCrypto: Data | null) => ({
   chart: {
     id: "crypto-chart",
     animations: {
@@ -30,17 +30,45 @@ export const getChartOptions = () => ({
       show: false,
     },
   },
-  yaxis: {
-    labels: {
-      formatter: (value: number) => `$${value.toFixed(2)}`,
-      style: {
-        colors: "#A0AEC0", // gray.400
+  yaxis: comparedCrypto
+    ? [
+        {
+          labels: {
+            formatter: (value: number) => `$${value.toFixed(2)}`,
+            style: {
+              colors: "#0EA5E9", // sky.500
+            },
+          },
+          tooltip: {
+            enabled: true,
+          },
+          seriesName: "main-crypto",
+        },
+        {
+          opposite: true,
+          labels: {
+            formatter: (value: number) => `$${value.toFixed(2)}`,
+            style: {
+              colors: "#EF4444", // red.500
+            },
+          },
+          tooltip: {
+            enabled: true,
+          },
+          seriesName: "compared-crypto",
+        },
+      ]
+    : {
+        labels: {
+          formatter: (value: number) => `$${value.toFixed(2)}`,
+          style: {
+            colors: "#A0AEC0", // gray.400
+          },
+        },
+        tooltip: {
+          enabled: true,
+        },
       },
-    },
-    tooltip: {
-      enabled: true,
-    },
-  },
   grid: {
     borderColor: "#4A5568", // gray.700
     strokeDashArray: 4,
@@ -87,6 +115,7 @@ export const getSeries = (
     {
       name: crypto?.symbol || "",
       data: chartData,
+      yaxisIndex: 0,
     },
   ];
 
@@ -94,6 +123,7 @@ export const getSeries = (
     s.push({
       name: comparedCrypto.symbol,
       data: comparisonChartData,
+      yaxisIndex: 1,
     });
   }
   return s;

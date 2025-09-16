@@ -78,7 +78,7 @@ const CryptoDetailModal = ({
     // Do not render modal content if it's closed or no crypto is selected
     if (!isOpen || !crypto) return null;
 
-    const chartOptions = getChartOptions();
+    const chartOptions = getChartOptions(comparedCrypto);
 
     const series = getSeries(
         crypto,
