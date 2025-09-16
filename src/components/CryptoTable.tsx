@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { type Data } from "../types";
 import gsap from "gsap";
-import TableHead from "../components/commons/TableHead"
+import TableHead from "./common/TableHead"
 
 interface CryptoTableProps {
     data: Data[];

@@ -89,7 +89,7 @@ const CryptoDetailModal = ({
 
     return (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-xs flex justify-center items-center z-50">
-            <div className="bg-gradient-to-b from-sky-950/50 to-indigo-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="bg-gradient-to-b from-sky-950/50 to-sky-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center">
                         <img
@@ -97,13 +97,13 @@ const CryptoDetailModal = ({
                             alt={`${crypto.name} logo`}
                             className="w-6 h-6 mr-2"
                         />
-                        <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-indigo-500 via-sky-500 to-indigo-500 inline-block text-transparent bg-clip-text">
+                        <h2 className="text-2xl font-bold wrap-break-word bg-gradient-to-r from-sky-600 via-sky-500 to-sky-600 inline-block text-transparent bg-clip-text">
                             {crypto.name} ({crypto.symbol})
                         </h2>
                     </div>
                     <button
                         onClick={onClose}
-                        className="hover:scale-125 hover:font-bold text-xl cursor-pointer transition duration-100"
+                        className="hover:scale-125 hover:font-bold text-xl cursor-pointer transition duration-100 hover:text-sky-500"
                     >
                         ✕
                     </button>
@@ -118,8 +118,8 @@ const CryptoDetailModal = ({
                                     key={tf}
                                     onClick={() => setTimeframe(tf)}
                                     className={`px-3 py-1 rounded-md text-sm transition duration-400 cursor-pointer ${timeframe === tf
-                                        ? "bg-gradient-to-br from-sky-500 to-indigo-500 font-bold animate-pulse brightness-110"
-                                        : "border border-sky-800 hover:bg-gradient-to-br from-sky-500/50 to-indigo-500/50"
+                                        ? "bg-gradient-to-br from-sky-500 to-sky-700 font-bold outline-none"
+                                        : "border border-sky-800 hover:bg-gradient-to-br from-sky-500/80 to-sky-500/50"
                                         }`}
                                 >
                                     {tf}
@@ -168,7 +168,7 @@ const CryptoDetailModal = ({
                             {filteredCryptos.map((c) => (
                                 <li
                                     key={c.id}
-                                    className="p-2 hover:bg-gradient-to-t from-sky-500/30 to-indigo-500/30 transition duration-75 cursor-pointer rounded-md"
+                                    className="p-2 hover:bg-gradient-to-br from-sky-500/80 to-sky-500/50 transition duration-75 cursor-pointer rounded-md"
                                     onClick={() => {
                                         setComparedCrypto(c);
                                         setSearchTerm(""); // Clear search after selection
@@ -180,8 +180,8 @@ const CryptoDetailModal = ({
                             ))}
                         </ul>
                         {comparedCrypto && (
-                            <div className="mt-4 p-3 bg-gradient-to-t from-sky-500/10 to-indigo-500/20 rounded-md flex justify-between items-center">
-                                <span>
+                            <div className="mt-4 p-2 bg-gradient-to-br from-sky-500 to-sky-700 rounded-md flex justify-between items-center">
+                                <span className="font-bold">
                                     {comparedCrypto.name} ({comparedCrypto.symbol})
                                 </span>
                                 <button
