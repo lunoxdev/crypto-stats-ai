@@ -102,7 +102,10 @@ const CryptoDetailModal = ({
                         </h2>
                     </div>
                     <button
-                        onClick={onClose}
+                        onClick={() => {
+                            onClose();
+                            setComparedCrypto(null);
+                        }}
                         className="hover:scale-125 hover:font-bold text-xl cursor-pointer transition duration-100 hover:text-sky-500"
                     >
                         ✕
@@ -130,13 +133,15 @@ const CryptoDetailModal = ({
                         <div className="h-72 sm:h-full bg-black/30 rounded-md flex items-center justify-center shadow-md shadow-black">
                             {chartData.length > 0 ||
                                 (comparedCrypto && comparisonChartData.length > 0) ? (
-                                <Chart
-                                    options={chartOptions}
-                                    series={series}
-                                    type="area"
-                                    height="100%"
-                                    width="100%"
-                                />
+                                <div className="w-full h-full">
+                                    <Chart
+                                        options={chartOptions}
+                                        series={series}
+                                        type="area"
+                                        height="100%"
+                                        width="100%"
+                                    />
+                                </div>
                             ) : (
                                 <span className="animate-spin">
                                     <svg
