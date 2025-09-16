@@ -160,7 +160,7 @@ const CryptoDetailModal = ({
                         <input
                             type="text"
                             placeholder="Search cryptocurrency..."
-                            className="w-full p-2 rounded-md border border-sky-600 border-x-0 focus:border-sky-500 hover:brightness-110 mb-2 cursor-pointer outline-none"
+                            className="w-full p-2 rounded-sm border border-sky-900 border-x-0 focus:border-sky-500 hover:brightness-110 mb-2 cursor-pointer outline-none"
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
