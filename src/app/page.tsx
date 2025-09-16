@@ -1,11 +1,11 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import { type Data } from "./../types"
-import Hero from "./components/Hero";
-import CryptoTable from "./components/CryptoTable";
-import CryptoDetailModal from "./components/CryptoDetailModal";
-import Background from "./components/Background";
+import { type Data } from "../types"
+import Hero from "@/components/Hero";
+import CryptoTable from "@/components/CryptoTable";
+import CryptoDetailModal from "@/components/CryptoDetailModal";
+import Background from "@/components/Background";
 
 export default function Home() {
   const [data, setData] = useState<Data[]>([]);

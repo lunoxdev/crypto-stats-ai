@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { type Data } from "../../types";
+import { type Data } from "../types";
 import gsap from "gsap";
 import TableHead from "../components/commons/TableHead"
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import { type Data, type CryptoDetailModalProps } from "../../types";
+import { type Data, type CryptoDetailModalProps } from "../types";
 import dynamic from "next/dynamic";
-import { timeframes, getChartOptions, getSeries } from "../../lib/chartConfig";
+import { timeframes, getChartOptions, getSeries } from "../lib/chartConfig";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 
