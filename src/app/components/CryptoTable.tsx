@@ -27,7 +27,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
         gsap.fromTo(
             rows,
             { opacity: 0, y: 20 },
-            { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power3.out" }
+            { opacity: 1, y: 0, duration: 0.5, stagger: 0.1, ease: "power3.in" }
         );
     }, [data]);
 
@@ -53,7 +53,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
                     {data.map((crypto, index) => (
                         <tr
                             key={crypto.id}
-                            className="hover:bg-gradient-to-br from-sky-500/15 to-indigo-500/15 transition duration-300 cursor-pointer"
+                            className="hover:bg-gradient-to-br from-sky-500/15 to-indigo-500/15 transition duration-300 cursor-pointer opacity-0"
                             onClick={() => onRowClick(crypto)}
                         >
                             <td className="px-3 py-4 whitespace-nowrap text-xs sm:text-base font-medium text-amber-500">
