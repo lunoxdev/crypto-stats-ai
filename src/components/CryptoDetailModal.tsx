@@ -89,7 +89,7 @@ const CryptoDetailModal = ({
 
     return (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-xs flex justify-center items-center z-50">
-            <div className="bg-gradient-to-b from-sky-950/50 to-sky-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="bg-gradient-to-b from-sky-950/50 to-sky-950/30 p-6 rounded-md w-11/12 max-w-4xl h-5/6 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                 <div className="flex justify-between items-center mb-4">
                     <div className="flex items-center">
                         <img
