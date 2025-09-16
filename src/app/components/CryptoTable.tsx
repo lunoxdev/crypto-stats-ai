@@ -1,9 +1,17 @@
 import React from "react";
-import { Data } from "../../types";
+import { type Data } from "../../types";
 
 interface CryptoTableProps {
     data: Data[];
     onRowClick: (crypto: Data) => void;
+}
+
+const TableHead = ({ text }: { text: string }) => {
+    return (
+        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
+            {text}
+        </th>
+    )
 }
 
 const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
@@ -12,36 +20,16 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
             <table className="min-w-full divide-y divide-sky-500">
                 <thead className="bg-gradient-to-t from-sky-500/20 from-10% via-sky-950/70 via-10% to-black">
                     <tr>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            #
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Name
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Price
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            1h %
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            24h %
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            7d %
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Market Cap
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Volume(24h)
-                        </th>
-                        <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Circulating Supply
-                        </th>
-                        {/* <th className="px-3 py-4 text-left text-sm uppercase tracking-wider text-sky-200 font-bold text-nowrap">
-                            Last 7 Days
-                        </th> */}
+                        <TableHead text="#" />
+                        <TableHead text="Name" />
+                        <TableHead text="Price" />
+                        <TableHead text="1h %" />
+                        <TableHead text="24h %" />
+                        <TableHead text="7d %" />
+                        <TableHead text="Market Cap" />
+                        <TableHead text="Volume(24h)" />
+                        <TableHead text="Circulating Supply" />
+                        {/* <TableHead text="Last 7 Days" /> */}
                     </tr>
                 </thead>
                 <tbody className="divide-y divide-sky-300/20">
@@ -103,7 +91,7 @@ const CryptoTable = ({ data, onRowClick }: CryptoTableProps) => {
                                     {crypto.quote.USD.percent_change_7d.toFixed(2)}%
                                 </span>
                             </td>
-                            <td className="px-4 py-4 whitespace-nowrap text-xs sm:text-bas">
+                            <td className="px-4 py-4 whitespace-nowrap text-xs sm:text-base">
                                 ${crypto.quote.USD.market_cap.toLocaleString()}
                             </td>
                             <td className="px-4 py-4 whitespace-nowrap text-xs sm:text-base">
